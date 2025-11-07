@@ -4,19 +4,19 @@ import type { Testimonial } from '../types';
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Working with Yuvaraj Accounting has been a game-changer for our business. Their attention to detail and proactive advice on GST filing saved us both time and money. Highly recommended!",
-    name: 'Priya Sharma',
-    company: 'Innovate Solutions Inc.'
+    quote: "Working with [Company Name] has been a game-changer for our business. Their attention to detail and proactive advice on tax filing saved us both time and money. Highly recommended!",
+    name: '[Client Name]',
+    company: '[Client Company]'
   },
   {
-    quote: "As a new entrepreneur, navigating company formation was daunting. The team at YATS made the process incredibly smooth and transparent. Their expertise is invaluable.",
-    name: 'Rohan Verma',
-    company: 'Verma Tech Start-up'
+    quote: "As a new entrepreneur, navigating company formation was daunting. The team at [Company Name] made the process incredibly smooth and transparent. Their expertise is invaluable.",
+    name: '[Client Name]',
+    company: '[Client Company]'
   },
   {
     quote: "Their financial consulting services provided us with a clear roadmap for growth. We finally feel in control of our finances and confident about the future.",
-    name: 'Anjali Desai',
-    company: 'Creative Designs Co.'
+    name: '[Client Name]',
+    company: '[Client Company]'
   }
 ];
 

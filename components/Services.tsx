@@ -36,11 +36,32 @@ const services: Service[] = [
   }
 ];
 
-const ServiceCard: React.FC<{ service: Service }> = ({ service }) => (
-  <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out border-t-4 border-gold">
-    <div className="text-gold mb-4">{service.icon}</div>
-    <h3 className="text-xl font-bold text-navy mb-2">{service.title}</h3>
-    <p className="text-gray-600">{service.description}</p>
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+  <div 
+    className="glass-card p-8 rounded-2xl shadow-2xl hover:shadow-gold/20 hover:-translate-y-4 transition-all duration-500 ease-in-out border border-white/20 hover:border-gold/30 group relative overflow-hidden animate-slide-up hover-glow"
+    style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'backwards' }}
+  >
+    {/* Background glow effect */}
+    <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    
+    {/* Animated border */}
+    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+    
+    <div className="relative z-10">
+      <div className="text-gold mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 floating-element">
+        {service.icon}
+      </div>
+      <h3 className="text-xl font-bold text-navy mb-4 group-hover:text-gold transition-colors duration-300">
+        {service.title}
+      </h3>
+      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
+        {service.description}
+      </p>
+    </div>
+    
+    {/* Decorative corner elements */}
+    <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-gold/20 group-hover:border-gold/60 transition-colors duration-300"></div>
+    <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-gold/20 group-hover:border-gold/60 transition-colors duration-300"></div>
   </div>
 );
 
@@ -55,7 +76,7 @@ const Services: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
       </div>

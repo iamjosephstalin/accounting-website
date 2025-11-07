@@ -13,15 +13,15 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-navy text-white sticky top-0 z-50 shadow-lg">
+    <header className="glass-card-dark text-white sticky top-0 z-50 shadow-2xl backdrop-blur-md border-b border-gold/20">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-gold">Yuvaraj</a>
+        <a href="#home" className="text-2xl font-bold text-gradient-gold hover:scale-105 transition-transform duration-300">Your Company</a>
         
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-gold transition duration-300 ease-in-out">{link.label}</a>
           ))}
-          <a href="#contact" className="bg-gold text-navy font-semibold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ease-in-out transform hover:scale-105">
+          <a href="#contact" className="bg-gradient-to-r from-gold to-yellow-400 text-navy font-semibold py-2 px-6 rounded-full hover:from-yellow-400 hover:to-gold transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-0.5 shadow-lg btn-shimmer">
             Book Consultation
           </a>
         </nav>

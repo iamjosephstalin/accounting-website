@@ -1,10 +1,10 @@
-# Yuvaraj Accounting & Taxation Services
+# Professional Accounting & Taxation Services Template
 
-A modern, responsive website for **Yuvaraj Accounting & Taxation Services** - a trusted accounting firm with over 15 years of experience providing comprehensive financial solutions for individuals and businesses.
+A modern, responsive website template for **accounting and taxation services** - designed for professional service firms providing comprehensive financial solutions for individuals and businesses.
 
-## 🏢 About the Company
+## 🏢 About This Template
 
-Yuvaraj Accounting & Taxation Services specializes in:
+This template is perfect for accounting firms that specialize in:
 - **Income Tax Filing** - Expert preparation and filing of individual and corporate tax returns
 - **GST Registration & Filing** - Seamless GST compliance and return filing
 - **Business Accounting** - Comprehensive bookkeeping and financial record maintenance
@@ -30,7 +30,7 @@ Yuvaraj Accounting & Taxation Services specializes in:
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd yuvaraj-accounting-taxation-services
+   cd accounting-services-template
    ```
 
 2. **Install dependencies:**
@@ -133,7 +133,7 @@ The website includes:
 
 ## 📄 License
 
-This project is private and proprietary to Yuvaraj Accounting & Taxation Services.
+This project is a template that can be customized for your accounting business.
 
 ## 📞 Support
 
@@ -143,4 +143,4 @@ For technical support or questions about the website:
 
 ---
 
-**Yuvaraj Accounting & Taxation Services** - *Simplifying complexity, so you can focus on what matters most.*
+**Your Company Name** - *Simplifying complexity, so you can focus on what matters most.*

@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row gap-12 items-stretch">
           {/* Contact Form */}
-          <div className="lg:w-1/2 bg-white p-8 rounded-lg shadow-xl flex flex-col justify-center min-h-[580px]">
+          <div className="lg:w-1/2 glass-card p-8 rounded-2xl shadow-2xl flex flex-col justify-center min-h-[580px] border border-white/20 animate-slide-left">
             {submissionStatus === 'success' ? (
               <div className="flex flex-col items-center justify-center h-full text-center animate-fade-in">
                 <CheckCircleIcon className="w-16 h-16 text-green-500 mb-4" />
@@ -98,42 +98,42 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Info & Map */}
-          <div className="lg:w-1/2 flex flex-col justify-between">
+          <div className="lg:w-1/2 flex flex-col justify-between animate-slide-right">
             <div>
               <h3 className="text-2xl font-bold text-navy mb-8">Contact Information</h3>
               <div className="space-y-6 text-lg">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold/10 p-3 rounded-full mt-1 flex-shrink-0">
+                <div className="flex items-start gap-4 glass-card p-4 rounded-xl border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-gold/20 to-gold/10 p-3 rounded-full mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <LocationIcon className="text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy">Office Address</h4>
-                    <p className="text-gray-600">No. 68, 1st Floor, Avadi - Poonamallee High Road, Rajbai Nagar (Near Govardhanagiri), Avadi, Chennai, Tamil Nadu 600071</p>
+                    <h4 className="font-bold text-navy group-hover:text-gold transition-colors duration-300">Office Address</h4>
+                    <p className="text-gray-600">[Your Business Address], [City], [State/Province] [Postal Code]</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold/10 p-3 rounded-full mt-1 flex-shrink-0">
+                <div className="flex items-start gap-4 glass-card p-4 rounded-xl border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-gold/20 to-gold/10 p-3 rounded-full mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <PhoneIcon className="text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy">Phone Number</h4>
-                    <p className="text-gray-600">+91 9789801048</p>
+                    <h4 className="font-bold text-navy group-hover:text-gold transition-colors duration-300">Phone Number</h4>
+                    <p className="text-gray-600">[+1 (555) 123-4567]</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold/10 p-3 rounded-full mt-1 flex-shrink-0">
+                <div className="flex items-start gap-4 glass-card p-4 rounded-xl border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-gold/20 to-gold/10 p-3 rounded-full mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <MailIcon className="text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy">Email Address</h4>
-                    <p className="text-gray-600">contact@yuvarajtax.com</p>
+                    <h4 className="font-bold text-navy group-hover:text-gold transition-colors duration-300">Email Address</h4>
+                    <p className="text-gray-600">[contact@yourcompany.com]</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 rounded-lg shadow-lg overflow-hidden h-64 lg:h-80">
+            <div className="mt-8 rounded-2xl shadow-2xl overflow-hidden h-64 lg:h-80 border-4 border-white/20 hover:border-gold/30 transition-colors duration-300">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.993952504936!2d80.1067447148226!3d13.10144919081297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzA1LjIiTiA4MMKwMDYnMzIuMiJF!5e0!3m2!1sen!2sin!4v1620000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.398196963419!2d-74.00601768461607!3d40.71277597932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e18a5c9%3A0x69c1b1c9f1b1e1e1!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1620000000000"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

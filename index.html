@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yuvaraj Accounting & Taxation Services</title>
+    <title>Your Company Name - Professional Accounting Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +22,57 @@
             },
             animation: {
               'fade-in': 'fade-in 0.5s ease-out forwards',
+              'slide-up': 'slide-up 0.8s ease-out forwards',
+              'slide-down': 'slide-down 0.8s ease-out forwards',
+              'slide-left': 'slide-left 0.8s ease-out forwards',
+              'slide-right': 'slide-right 0.8s ease-out forwards',
+              'scale-in': 'scale-in 0.6s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
             },
             keyframes: {
               'fade-in': {
                 'from': { opacity: '0', transform: 'translateY(20px)' },
                 'to': { opacity: '1', transform: 'translateY(0)' },
-              }
+              },
+              'slide-up': {
+                'from': { opacity: '0', transform: 'translateY(60px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'slide-down': {
+                'from': { opacity: '0', transform: 'translateY(-60px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'slide-left': {
+                'from': { opacity: '0', transform: 'translateX(60px)' },
+                'to': { opacity: '1', transform: 'translateX(0)' },
+              },
+              'slide-right': {
+                'from': { opacity: '0', transform: 'translateX(-60px)' },
+                'to': { opacity: '1', transform: 'translateX(0)' },
+              },
+              'scale-in': {
+                'from': { opacity: '0', transform: 'scale(0.8)' },
+                'to': { opacity: '1', transform: 'scale(1)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'pulse-glow': {
+                'from': { boxShadow: '0 0 20px rgba(212, 175, 55, 0.4)' },
+                'to': { boxShadow: '0 0 40px rgba(212, 175, 55, 0.8)' },
+              },
+              'shimmer': {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
+              },
+              'bounce-gentle': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
             }
           }
         }
@@ -39,56 +84,332 @@
         scroll-behavior: smooth;
       }
       
+      /* Enhanced Gradient Text Effects */
       .text-gradient-gold {
-        background: linear-gradient(90deg, #F7D16E, #D4AF37);
+        background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700, #FFFF00);
+        background-size: 300% 300%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
+        animation: shimmer 4s ease-in-out infinite;
+        text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
       }
 
+      .text-gradient-primary {
+        background: linear-gradient(135deg, #E6E6FA 0%, #FFFFFF 50%, #E6E6FA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+      }
+
+      .text-blue-200 {
+        color: #BFDBFE;
+        text-shadow: 
+          0 1px 3px rgba(0, 0, 0, 0.6),
+          0 2px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .text-high-contrast {
+        color: #FFFFFF;
+        text-shadow: 
+          0 0 10px rgba(0, 0, 0, 0.8),
+          0 2px 20px rgba(0, 0, 0, 0.6),
+          0 4px 30px rgba(0, 0, 0, 0.4);
+        font-weight: 500;
+      }
+
+      .text-elegant-subtitle {
+        color: #F5F5F5;
+        text-shadow: 
+          0 1px 5px rgba(0, 0, 0, 0.7),
+          0 2px 15px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
+      }
+
+      /* Glassmorphism Effects */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      }
+
+      .glass-card-dark {
+        background: rgba(10, 25, 47, 0.4);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+      }
+
+      .glass-hero {
+        background: 
+          linear-gradient(135deg, 
+            rgba(0, 0, 0, 0.4) 0%, 
+            rgba(10, 25, 47, 0.3) 50%, 
+            rgba(0, 0, 0, 0.4) 100%
+          );
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 
+          0 25px 80px rgba(0, 0, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+
+      /* Enhanced Background Animation */
       @keyframes move-particles-finance {
         0% {
           background-position: 
             0 0, 0 0, /* grid */
             15% 50%, /* particle 1 */
             80% 30%, /* particle 2 */
-            30% 90%; /* particle 3 */
+            30% 90%, /* particle 3 */
+            60% 20%, /* particle 4 */
+            10% 80%; /* particle 5 */
+        }
+        25% {
+          background-position: 
+            -25px -25px, -25px -25px, /* grid */
+            25% 20%, /* particle 1 */
+            70% 60%, /* particle 2 */
+            50% 70%, /* particle 3 */
+            80% 40%, /* particle 4 */
+            20% 60%; /* particle 5 */
         }
         50% {
           background-position: 
-            -25px -25px, -25px -25px, /* grid */
+            -50px -50px, -50px -50px, /* grid */
             50% 10%, /* particle 1 */
             40% 70%, /* particle 2 */
-            90% 20%; /* particle 3 */
+            90% 20%, /* particle 3 */
+            30% 80%, /* particle 4 */
+            70% 30%; /* particle 5 */
+        }
+        75% {
+          background-position: 
+            -75px -75px, -75px -75px, /* grid */
+            70% 80%, /* particle 1 */
+            20% 40%, /* particle 2 */
+            60% 90%, /* particle 3 */
+            90% 10%, /* particle 4 */
+            40% 50%; /* particle 5 */
         }
         100% {
           background-position: 
-            -50px -50px, -50px -50px, /* grid */
+            -100px -100px, -100px -100px, /* grid */
             15% 50%, /* particle 1 */
             80% 30%, /* particle 2 */
-            30% 90%; /* particle 3 */
+            30% 90%, /* particle 3 */
+            60% 20%, /* particle 4 */
+            10% 80%; /* particle 5 */
         }
       }
 
       .particle-bg {
-        background-color: #0a192f;
+        background: 
+          linear-gradient(135deg, #000000 0%, #0a192f 30%, #1a1a2e 60%, #0a192f 100%);
         background-image: 
-          /* Faint grid for a financial/tech look */
-          linear-gradient(rgba(212, 175, 55, 0.07) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(212, 175, 55, 0.07) 1px, transparent 1px),
-          /* Soft, glowing particles */
-          radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 40%),
-          radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+          /* Subtle grid pattern */
+          linear-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+          /* Glowing particles with varying sizes */
+          radial-gradient(circle at center, rgba(255, 215, 0, 0.4) 0%, transparent 30%),
+          radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+          radial-gradient(circle at center, rgba(212, 175, 55, 0.25) 0%, transparent 50%),
+          radial-gradient(circle at center, rgba(255, 215, 0, 0.2) 0%, transparent 35%),
+          radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
         background-size: 
-          50px 50px, /* grid size */
-          50px 50px, /* grid size */
-          30em 30em, /* particle size 1 */
-          45em 45em, /* particle size 2 */
-          25em 25em; /* particle size 3 */
-        background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
-        animation: move-particles-finance 30s ease-in-out infinite;
+          80px 80px, /* grid size */
+          80px 80px, /* grid size */
+          45em 45em, /* particle size 1 */
+          60em 60em, /* particle size 2 */
+          35em 35em, /* particle size 3 */
+          40em 40em, /* particle size 4 */
+          90em 90em; /* particle size 5 */
+        background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        animation: move-particles-finance 60s ease-in-out infinite;
+        position: relative;
+      }
+
+      .particle-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          radial-gradient(ellipse 80% 50% at top center, rgba(255, 215, 0, 0.12) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 40% at bottom center, rgba(10, 25, 47, 0.8) 0%, transparent 70%),
+          linear-gradient(45deg, transparent 48%, rgba(255, 215, 0, 0.02) 49%, rgba(255, 215, 0, 0.02) 51%, transparent 52%);
+        animation: background-waves 40s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .particle-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          conic-gradient(from 0deg at 20% 80%, transparent 0deg, rgba(255, 215, 0, 0.08) 45deg, transparent 90deg),
+          conic-gradient(from 180deg at 80% 20%, transparent 0deg, rgba(212, 175, 55, 0.06) 60deg, transparent 120deg);
+        animation: background-rotate 80s linear infinite;
+        pointer-events: none;
+        opacity: 0.7;
+      }
+
+      @keyframes background-waves {
+        0%, 100% {
+          background-position: 0% 0%, 0% 100%, 0% 0%;
+        }
+        25% {
+          background-position: 100% 20%, 50% 80%, 25% 25%;
+        }
+        50% {
+          background-position: 50% 40%, 100% 60%, 50% 50%;
+        }
+        75% {
+          background-position: 0% 60%, 25% 40%, 75% 75%;
+        }
+      }
+
+      @keyframes background-rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Floating elements */
+      .floating-element {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-element:nth-child(odd) {
+        animation-delay: -3s;
+      }
+
+      /* Hover effects */
+      .hover-glow:hover {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        transition: all 0.3s ease;
+      }
+
+      /* Button shimmer effect */
+      .btn-shimmer {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-shimmer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.5s;
+      }
+
+      .btn-shimmer:hover::before {
+        left: 100%;
+      }
+
+      /* Parallax scroll effect */
+      .parallax-slow {
+        transform: translateZ(0);
+        will-change: transform;
+      }
+
+      /* Enhanced button effects */
+      .bg-size-200 {
+        background-size: 200% 100%;
+      }
+
+      .bg-pos-100:hover {
+        background-position: 100% 0;
+      }
+
+      /* Luxury decorative elements */
+      .luxury-frame {
+        position: relative;
+      }
+
+      .luxury-frame::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        z-index: -1;
+        border-radius: inherit;
+      }
+
+      /* Premium text effects */
+      .text-luxury {
+        background: linear-gradient(135deg, #FFD700 0%, #FFF 20%, #FFD700 40%, #FFF 60%, #FFD700 80%, #FFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        background-size: 300% 100%;
+        animation: luxury-shimmer 3s ease-in-out infinite;
+      }
+
+      @keyframes luxury-shimmer {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      /* Background animation keyframes */
+      @keyframes grid-move {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(40px, 40px);
+        }
+      }
+
+      /* Radial gradient utility */
+      .bg-gradient-radial {
+        background: radial-gradient(circle, var(--tw-gradient-stops));
+      }
+
+      /* Enhanced spin animations */
+      @keyframes spin-slow {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      @keyframes spin-reverse {
+        from {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
       }
     </style>
   <script type="importmap">

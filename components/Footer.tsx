@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-gold mb-2">Yuvaraj</h3>
+            <h3 className="text-2xl font-bold text-gold mb-2">[Your Company]</h3>
             <p className="text-gray-400">Your trusted partner in financial growth.</p>
             <div className="mt-4">{socialIcons}</div>
           </div>
@@ -53,16 +53,16 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-4 text-gold">Contact Us</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>No. 68, 1st Floor, Avadi, Chennai</li>
-              <li>contact@yuvarajtax.com</li>
-              <li>+91 9789801048</li>
+              <li>[Your Address], [City]</li>
+              <li>[contact@yourcompany.com]</li>
+              <li>[+1 (555) 123-4567]</li>
             </ul>
           </div>
         </div>
       </div>
       <div className="bg-black bg-opacity-20 py-4">
         <div className="container mx-auto px-6 text-center text-sm text-gray-400">
-          <p>Copyright © 2025 Yuvaraj Accounting and Taxation Services. All Rights Reserved.</p>
+          <p>Copyright © 2025 [Your Company Name]. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
