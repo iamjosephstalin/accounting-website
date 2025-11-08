@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { getWhatsAppUrl } from '../utils/env';
 
 const WhatsAppIcon = () => (
   <svg
@@ -13,16 +14,18 @@ const WhatsAppIcon = () => (
 );
 
 const WhatsAppWidget: React.FC = () => {
+  const handleWhatsAppClick = () => {
+    window.open(getWhatsAppUrl(), '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <a
-      href="https://wa.me/15551234567"
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      onClick={handleWhatsAppClick}
       aria-label="Chat with us on WhatsApp"
-      className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 animate-bounce-gentle hover-glow"
+      className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 animate-bounce-gentle hover-glow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
     >
       <WhatsAppIcon />
-    </a>
+    </button>
   );
 };
 
